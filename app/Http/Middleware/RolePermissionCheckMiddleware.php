@@ -30,7 +30,7 @@ class RolePermissionCheckMiddleware
         if($user->can('create-post')) {
             return $next($request);
         } else {
-            return response('Unauthorized action', 403);
+            return response(view('errors.403'), 403);
         }
     }
 }
