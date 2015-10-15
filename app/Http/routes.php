@@ -36,3 +36,5 @@ Route::group([
     Route::post('register', "Auth\AuthController@postRegister");
     Route::get( 'logout',   "Auth\AuthController@getLogout");
 });
+
+Route::resource('User', 'UserController');
